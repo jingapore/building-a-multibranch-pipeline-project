@@ -11,6 +11,7 @@ pipeline{
 	stages {
 		stage('Build') {
 			steps {
+				sh 'ping www.google.com -c 5'
 				sh 'ping registry.npmjs.org -c 5'
 				sh 'npm install'
 			}
